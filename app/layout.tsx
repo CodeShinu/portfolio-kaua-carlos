@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,6 @@ export const metadata:Metadata={
   icons:{icon:"/favicon.svg",shortcut:"/favicon.svg"},
   openGraph:{title:"Kauã Carlos — Software & Computer Science",description:"Python, backend, dados e projetos em construção.",type:"website",locale:"pt_BR"},
   twitter:{card:"summary_large_image",title:"Kauã Carlos — Software & Computer Science",description:"Python, backend, dados e projetos em construção."},
-  themeColor:"#111411",
 };
+export const viewport:Viewport={themeColor:"#111411"};
 export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="pt-BR"><body className={`${sans.variable} ${mono.variable}`}><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(personData)}}/>{children}</body></html>}
